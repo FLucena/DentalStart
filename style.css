@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 5px;
-    grid-auto-rows: auto;
+    grid-auto-rows: 40px, 20.5px, auto;
     grid-template-areas:
       "a a a a b b b b"
       "c c c c d d d d"
@@ -68,7 +68,6 @@
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdownF:hover .dropbtn {
     display: inline-block;
-    font-weight: bold;
     letter-spacing: 0;
     color: gray;
   }
@@ -136,4 +135,22 @@ a {
   border-color: #fff0f4;
   border-style: solid;
   border-radius: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dropdownF .dropbtn  {
+    font-size: 10px;
+  }
+  .wrapper {
+    grid-template-areas:
+    "a a a a a a a a"
+    "b b b b b b b b"
+    "c c c c c c c c"
+    "c c c c c c c c"
+    "c c c c c c c c"
+    "d d d d d d d d"
+    "d d d d d d d d"
+    "d d d d d d d d"
+    "e e e e e e e e";
+  }
 }
