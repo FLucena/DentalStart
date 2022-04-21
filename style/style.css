@@ -1,14 +1,17 @@
 .wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 10px;
+    gap: 5px;
     grid-auto-rows: auto;
     grid-template-areas:
       "a a a a b b b b"
       "c c c c d d d d"
       "c c c c d d d d"
-      "c c c c d d d d";
+      "c c c c d d d d"
+      "e e e e e e e e";
     align-items: start;
+    background-color: #D8CEC4;
+    color: white;
   }
   .item1 {
     grid-area: a;
@@ -31,90 +34,106 @@
     grid-area: c;
     margin-left: 100px;
     margin-top: 100px;
+    padding-right: 100px;
   }
   .item4 {
     grid-area: d;
-    margin-left: 100px;
+    margin: 5px;
   }
-/* The dropdown container */
-.dropdown {
+  .map {
+    grid-area: e;
+    margin-left: 10px;
+  }
+/* The dropdownF container */
+.dropdownF {
     float: left;
     overflow: hidden;
   }
-  
   /* Dropdown button */
-  .dropdown .dropbtn {
+  .dropdownF .dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
-    color: black;
     padding: 14px 20px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
+    color: white
   }
   
+  .navbar {
+    position: relative;
+    margin-top: 2%;
+  }
   /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
+  .navbar a:hover, .dropdownF:hover .dropbtn {
     display: inline-block;
     font-weight: bold;
     letter-spacing: 0;
+    color: gray;
   }
   
   /* Dropdown content (hidden by default) */
-  .dropdown-content {
+  .dropdownF-content {
     display: none;
     position: absolute;
     overflow:hidden;
-    border-style: solid;
+    border-style: solid gray;
     border-radius: 30px;
-    box-shadow:none 0 -3em 3em rgba(0,0,0,0.1),
-    0 0  0 1px rgb(0,0,0),
-    0.3em 0.3em 1em rgba(0,0,0,0.3);
-    background-color: white;
+    background-color: #D8CEC4;
   }
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
+  /* Links inside the dropdownFF */
+  .dropdownF-content a {
     float: none;
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
   }
   
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  /* Show the dropdownF menu on hover */
+  .dropdownF:hover .dropdownF-content {
     display: block;
     text-align: center;
   }
-
   img {
       max-width: 100%;
       height: auto;
       padding: 14px 16px;
+      border-radius: 30px;
   }
-
-  
 @media only screen and (min-width: 600px) {
   }
-  
 @media only screen and (min-width: 768px) {
    }
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
 h1 {
     font-size: 50px;
     font-weight: bold;
+}
+button {
+  cursor: pointer;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color:white;
+}
+a {
+  color: white;
+}
+
+.carousel-inner {
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  border-bottom: 5px;
+  border-color: #fff0f4;
+  border-style: solid;
+  border-radius: 30px;
 }
