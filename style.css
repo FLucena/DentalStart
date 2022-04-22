@@ -1,13 +1,12 @@
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
     gap: 5px;
-    grid-auto-rows: 40px, 20.5px, auto;
     grid-template-areas:
       "a a a a b b b b"
       "c c c c d d d d"
       "c c c c d d d d"
       "c c c c d d d d"
+      "e e e e e e e e"
       "e e e e e e e e";
     align-items: start;
     background-color: #D8CEC4;
@@ -40,9 +39,13 @@
     grid-area: d;
     margin: 5px;
   }
-  .map {
+
+  .item5 {
     grid-area: e;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 10px;
+    justify-self: center;
   }
 /* The dropdownF container */
 .dropdownF {
@@ -102,14 +105,19 @@
       padding: 14px 16px;
       border-radius: 30px;
   }
-@media only screen and (min-width: 600px) {
-  }
-@media only screen and (min-width: 768px) {
-   }
 h1 {
     font-size: 50px;
     font-weight: bold;
 }
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 12px;
+}
+
+
 button {
   cursor: pointer;
 }
