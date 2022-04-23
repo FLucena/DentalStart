@@ -8,6 +8,7 @@
       "c c c c d d d d"
       "e e e e e e e e"
       "e e e e e e e e";
+    grid-template-rows: ;
     align-items: start;
     background-color: #D8CEC4;
     color: white;
@@ -193,7 +194,7 @@ a {
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 450px) {
   .dropdownF .dropbtn  {
     font-size: 10px;
   }
