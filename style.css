@@ -8,7 +8,6 @@
       "c c c c d d d d"
       "e e e e e e e e"
       "e e e e e e e e";
-    grid-template-rows: ;
     align-items: start;
     background-color: #D8CEC4;
     color: white;
@@ -33,12 +32,12 @@
   .item3 {
     grid-area: c;
     padding: 10px 50px;
-    margin: 150px 10px;
+    margin: 40px 10px;
   }
   .item4 {
     grid-area: d;
     padding: 10px;
-    margin: 10px;
+    margin: 40px 10px;
   }
   .item5 {
     grid-area: e;
@@ -204,7 +203,7 @@ a {
     "c c c c d d d d"
     "e e e e e e e e"
     "f f f f f f f f";
-    grid-template-rows: 80px 320px 250px;
+    grid-template-rows: 80px 320px 350px;
     grid-template-columns: repeat(8,1fr);
   }
   .item2 {
