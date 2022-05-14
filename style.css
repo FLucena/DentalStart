@@ -2,19 +2,17 @@
     display: grid;
     gap: 5px;
     grid-template-areas:
-      "a a a a b b b b"
-      "c c c c d d d d"
-      "c c c c d d d d"
-      "c c c c d d d d"
-      "e e e e e e e e"
-      "e e e e e e e e";
+      "a a a a a a a a b"
+      "c c c c d d d d d"
+      "e e e e e e e e e";
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 100px 470px 300px;
     align-items: start;
     background-color: #D8CEC4;
     color: white;
   }
   .item1 {
     grid-area: a;
-    margin-left: 10px;
     position: sticky;
     top: 0;
     min-width: auto;
@@ -22,7 +20,7 @@
   }
   .item2 {
     grid-area: b;
-    justify-self: end;
+    align-content: end; 
     margin-right: 10px;
     position: sticky;
     top: 0;
@@ -30,71 +28,36 @@
     max-width: 100%;
   }
   .item3 {
-    grid-area: c;
-    padding: 10px 50px;
-    margin: 40px 10px;
+    grid-area: c; 
+    padding: 145px 100px;
   }
   .item4 {
     grid-area: d;
-    padding: 10px;
-    margin: 40px 10px;
+    padding: 50px;
   }
   .item5 {
     grid-area: e;
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
   }
-/* The dropdownF container */
-.dropdownF {
-    float: left;
-    overflow: hidden;
-  }
-  /* Dropdown button */
   .dropdownF .dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
     padding: 14px 20px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    margin: 0;
     color: white
-  }
-  
+  }  
   .navbar {
     position: relative;
-    margin-top: 2%;
+    padding: 10px
   }
-  /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdownF:hover .dropbtn {
     display: inline-block;
     letter-spacing: 0;
     color: gray;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdownF-content {
-    display: none;
-    position: absolute;
-    overflow:hidden;
-    border-style: solid gray;
-    border-radius: 30px;
-    background-color: #D8CEC4;
-  }
-  
-  /* Links inside the dropdownFF */
-  .dropdownF-content a {
-    float: none;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-  }
-  
-  /* Show the dropdownF menu on hover */
-  .dropdownF:hover .dropdownF-content {
-    display: block;
-    text-align: center;
   }
   img {
       max-width: 100%;
@@ -141,59 +104,12 @@ a {
   border-radius: 30px;
 }
 
-@media only screen and (max-width: 600px) {
-  .dropdownF .dropbtn  {
-    font-size: 10px;
-  }
-  .wrapper {
-    grid-template-areas:
-    "a a a a a a a a"
-    "b b b b b b b b"
-    "c c c c c c c c"
-    "d d d d d d d d"
-    "e e e e e e e e"
-    "f f f f f f f f";
-    grid-template-rows: 50px 30px 300px 300px 250px 10px;
-  }
-  .item2 {
-    grid-area: b;
-    justify-self: end;
-    position: sticky;
-    top: 0;
-    min-width: auto;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .item3 {
-    grid-area: c;
-    padding: 10px 50px;
-    margin: 0px 10px;
-  }
-  .item4 {
-    grid-area: d;
-    padding: 10px;
-    margin: 30px;
-  }
-  .item5 {
-    grid-area: e;
-    padding: 0;
-    text-align: center;
-    font-size: 50%;
-    margin:20px
-  }
-  .fa {
-    padding: 0;
-    font-size: 10px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    color:white;
-  }
+.icon {
+  padding-right: 20px;
 }
 
-@media only screen and (max-height: 450px) {
+/* Pantalla chica */
+@media only screen and (max-height: 450px) and (min-width: 768px) {
   .dropdownF .dropbtn  {
     font-size: 10px;
   }
@@ -244,3 +160,59 @@ a {
     color:white;
   }
 }
+
+/* Pantalla mediana */
+@media only screen and (max-width: 600px) and (min-width: 992px) { 
+  .dropdownF .dropbtn  {
+    font-size: 10px;
+  }
+  .wrapper {
+    grid-template-areas:
+    "a a a a a a a a"
+    "b b b b b b b b"
+    "c c c c c c c c"
+    "d d d d d d d d"
+    "e e e e e e e e"
+    "f f f f f f f f";
+    grid-template-rows: 50px 30px 350px 280px 240px 10px;
+  }
+  .item2 {
+    grid-area: b;
+    justify-self: end;
+    position: sticky;
+    top: 0;
+    min-width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .item3 {
+    grid-area: c;
+    padding: 10px 50px;
+    margin: 0px 10px;
+  }
+  .item4 {
+    grid-area: d;
+    padding: 10px;
+    margin: 30px;
+  }
+  .item5 {
+    grid-area: e;
+    padding: 0;
+    text-align: center;
+    font-size: 50%;
+    margin:20px
+  }
+  .fa {
+    padding: 0;
+    font-size: 10px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color:white;
+  } 
+}
+
+/* Pantalla grande */
+@media (min-width: 1200px) {  }
