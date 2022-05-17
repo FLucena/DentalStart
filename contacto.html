@@ -22,10 +22,10 @@
           <button class="dropbtn" onclick="window.location.href='index.html';"><i class="fa-solid fa-house-chimney icon"></i>Inicio</button>
         </div>
         <div class="dropdownF">
-          <button class="dropbtn" onclick="window.location.href='turnos.html';"><i class="fa-regular fa-calendar-days icon"></i>Turnos</button>
+          <button class="dropbtn" onclick="window.location.href='publicaciones.html';"><i class="fa-regular fa-calendar-days icon"></i>Publicaciones</button>
         </div>
         <div class="dropdownF">
-          <button class="dropbtn" onclick="window.location.href='contacto.html';"><i class="fa-regular fa-envelope icon"></i>Quiero saber más!</button>
+          <button class="dropbtn" onclick="window.location.href='#';"><i class="fa-regular fa-envelope icon"></i>Quiero saber más!</button>
         </div>
         <div class="item2 navbar"> 
           <div class="dropdownF">
@@ -43,17 +43,14 @@
             </h2>
           </div>
           <form class="" name="miFormulario" onsubmit="validateForm()">
-            <div class="">
-              <label class="input-label">Nombre completo:</label>
-              <input type="text" class="input-field" name="nombre" value="" maxlength="22" required/>
+            <div class="input">
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" maxlength="22" required>
             </div>
             <div class="input">
-              <label class="input-label">Email:</label>
-              <input type="email" maxlength="32" required>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" maxlength="32" required>
             </div>
             <div class="input">
-              <label class="input-label">Consulta: </label>
-              <input type="text" name="consulta" size="60" height="60" required/>
+              <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4" placeholder="Deja tu consulta." spellcheck="false" required></textarea>
             </div>
             <div>
               <button type="submit">Enviar</button>
