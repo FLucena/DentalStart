@@ -1,0 +1,118 @@
+/* Pantalla chica */
+/* @media screen and (max-width: 600px) and (min-width: 50px) { */
+
+/* Pantalla mediana */
+/* @media screen and (max-width: 1200px) and (min-width: 600px) { */
+
+/* Pantalla grande */
+@media screen and (max-width: 10000px) and (min-width: 1200px) {
+  .wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template:
+      "a a a a a a a a b"
+      "c c c c d d d d d";
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 100px 1500px;
+    align-items: start;
+    background-color: #D8CEC4;
+    color: white;
+  }
+
+  .item1 {
+    grid-area: a;
+    position: sticky;
+    top: 0;
+    min-width: auto;
+    max-width: 100%;
+  }
+  .item2 {
+    grid-area: b;
+    align-content: end; 
+    margin-right: 10px;
+    position: sticky;
+    top: 0;
+    min-width: auto;
+    max-width: 100%;
+  }
+  .item3 {
+    grid-area: c; 
+    padding: 50px;
+  }
+  .item4 {
+    grid-area: d;
+    padding: 50px;
+  }
+
+  .dropdownF .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    color: white
+  }  
+  .navbar {
+    position: relative;
+    padding: 10px
+  }
+  .navbar a:hover, .dropdownF:hover .dropbtn {
+    display: inline-block;
+    letter-spacing: 0;
+    color: gray;
+  }
+  img {
+      max-width: 100%;
+      height: auto;
+      padding: 14px 16px;
+      border-radius: 30px;
+  }
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 12px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color:white;
+}
+a {
+  color: white;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 10%;
+}
+
+.carousel-inner {
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  border-bottom: 5px;
+  border-color: #fff0f4;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+.icon {
+  padding-right: 20px;
+}
+ }
