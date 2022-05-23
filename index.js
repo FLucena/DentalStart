@@ -9,11 +9,33 @@ function initMap() {
   
   window.initMap = initMap;
 
-  function validateForm() {
-    let x = document.forms["miFormulario"]["email"].value;
-    if (email.includes("@") == false) {
-      alert("Por favor revisar que el email se haya completado correctamente.");
-      console.log("Por favor revisar que el email se haya completado correctamente.")
-      return false;
-      }
-  }
+
+/*
+Validación del email:
+
+Al hacer click en el botón "Enviar", se correrá la función "validateForm" que controlará que se hayan incluido
+
+*/
+
+const form = document.querySelector("form[name='miFormulario']");
+const nameInput = document.querySelector("input[name='nombre']");
+const emailInput = document.querySelector("input[name='email']");
+const messageInput = document.querySelector("textarea[name='mensaje']");
+const errorElement = document.getElementById('error')
+
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  if (nameInput.value === '' || nameInput.value == null) {
+    messages.push('El nombre es requerido.');
+  };
+  if (emailInput.value === '' || emailInput.value == null) {
+    messages.push('El email es requerido.');
+  };
+  if (messageInput.value === '' || messageInput.value == null) {
+    messages.push('El mensaje es requerido.');
+  };
+  if (messages.length > 0) {
+    e.preventDefault();
+    errorElement.innerText = messages.join(' ');
+  };
+});

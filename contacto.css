@@ -12,6 +12,7 @@
     grid-template-columns: repeat(8,1fr);
     align-items:center;
     justify-content: center;
+    align-content: space-evenly;
     background-color: #D8CEC4;
     color: white;
   }
@@ -46,14 +47,10 @@
   }
   .item5 {
     grid-area: e;
-    display: flex;
-    justify-content: center;
     padding: 50px;
   }
   .item6 {
     grid-area: f;
-    display: flex;
-    justify-content: center;
     padding: 50px;
   }
 
@@ -128,6 +125,15 @@ a {
 .icon {
   padding-right: 20px;
 }
+.contact {
+  padding: 10px;
+}
+.miForm input, .miForm textarea, .miForm button {
+  margin: 10px;
+}
+.error {
+  color: red;
+}
  }
  
  /* Pantalla mediana */
@@ -144,6 +150,7 @@ a {
       grid-template-columns: repeat(8,1fr);
       align-items:center;
       justify-content: center;
+      align-content: space-evenly;
       background-color: #D8CEC4;
       color: white;
     }
@@ -178,16 +185,13 @@ a {
     }
     .item5 {
       grid-area: e;
-      display: flex;
-      justify-content: center;
       padding: 50px;
     }
     .item6 {
       grid-area: f;
-      display: flex;
-      justify-content: center;
       padding: 50px;
-    }  
+    }
+  
     .dropdownF .dropbtn {
       font-size: 16px;
       border: none;
@@ -259,6 +263,15 @@ a {
   .icon {
     padding-right: 20px;
   }
+  .contact {
+    padding: 10px;
+  }
+  .miForm input, .miForm textarea, .miForm button {
+    margin: 10px;
+  }
+  .error {
+    color: red;
+  }
    }
 
 /* Pantalla grande */
@@ -271,12 +284,13 @@ a {
       "c c c c d d d d d"
       "e e e e f f f f f";
     grid-template-columns: repeat(8,1fr);
-
     align-items:center;
     justify-content: center;
+    align-content: space-evenly;
     background-color: #D8CEC4;
     color: white;
   }
+
   .item1 {
     grid-area: a;
     position: sticky;
@@ -296,7 +310,7 @@ a {
   .item3 {
     grid-area: c; 
     display: flex;
-    justify-content:center;
+    justify-content: center;
     padding: 50px;
   }
   .item4 {
@@ -307,14 +321,10 @@ a {
   }
   .item5 {
     grid-area: e;
-    display: flex;
-    justify-content: center;
     padding: 50px;
   }
   .item6 {
     grid-area: f;
-    display: flex;
-    justify-content: center;
     padding: 50px;
   }
 
@@ -375,7 +385,6 @@ a {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 10%;
 }
-
 .carousel-inner {
   border-top: 5px;
   border-left: 5px;
@@ -385,8 +394,16 @@ a {
   border-style: solid;
   border-radius: 30px;
 }
-
 .icon {
   padding-right: 20px;
+}
+.contact {
+  padding: 10px;
+}
+.miForm input, .miForm textarea, .miForm button {
+  margin: 10px;
+}
+.error {
+  color: red;
 }
  }

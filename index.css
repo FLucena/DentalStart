@@ -7,15 +7,28 @@
       "a a a a a a a a b"
       "c c c c c c c c c"
       "d d d d d d d d d"
-      "e e e e e e e e e"
-      "f f f f f f f f f";
+      "e e e e e e e e e";
     grid-template-columns: repeat(8,1fr);
     align-items:center;
     justify-content: center;
+    align-content: space-evenly;
     background-color: #D8CEC4;
     color: white;
   }
-
+  p{
+    display:block;
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+  h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+  h6 {
+  font-size: 12px;
+}
   .item1 {
     grid-area: a;
     position: sticky;
@@ -34,8 +47,9 @@
   }
   .item3 {
     grid-area: c; 
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-items: center;
     padding: 50px;
   }
   .item4 {
@@ -50,13 +64,6 @@
     justify-content: center;
     padding: 50px;
   }
-  .item6 {
-    grid-area: f;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-  }
-
   .dropdownF .dropbtn {
     font-size: 16px;
     border: none;
@@ -82,18 +89,6 @@
       padding: 14px 16px;
       border-radius: 30px;
   }
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-h4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-h6 {
-  font-size: 12px;
-}
-
 button {
   cursor: pointer;
 }
@@ -128,138 +123,136 @@ a {
 .icon {
   padding-right: 20px;
 }
+p::after {
+  content: "\a";
+  white-space: pre;
+}
  }
- 
- /* Pantalla mediana */
+
+/* Pantalla mediana */
 @media screen and (max-width: 1200px) and (min-width: 600px) {
-    .wrapper {
-      display: grid;
-      gap: 5px;
-      grid-template:
-        "a a a a a a a a b"
-        "c c c c c c c c c"
-        "d d d d d d d d d"
-        "e e e e e e e e e"
-        "f f f f f f f f f";
-      grid-template-columns: repeat(8,1fr);
-      align-items:center;
-      justify-content: center;
-      background-color: #D8CEC4;
-      color: white;
-    }
-  
-    .item1 {
-      grid-area: a;
-      position: sticky;
-      top: 0;
-      min-width: auto;
-      max-width: 100%;
-    }
-    .item2 {
-      grid-area: b;
-      align-content: end; 
-      margin-right: 10px;
-      position: sticky;
-      top: 0;
-      min-width: auto;
-      max-width: 100%;
-    }
-    .item3 {
-      grid-area: c; 
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }
-    .item4 {
-      grid-area: d;
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }
-    .item5 {
-      grid-area: e;
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }
-    .item6 {
-      grid-area: f;
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }  
-    .dropdownF .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
-      padding: 14px 20px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-      color: white
-    }  
-    .navbar {
-      position: relative;
-      padding: 10px
-    }
-    .navbar a:hover, .dropdownF:hover .dropbtn {
-      display: inline-block;
-      letter-spacing: 0;
-      color: gray;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-        padding: 14px 16px;
-        border-radius: 30px;
-    }
-  h1 {
-      font-size: 50px;
-      font-weight: bold;
-  }
-  h4 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  h6 {
-    font-size: 12px;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    color:white;
-  }
-  a {
+  .wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template:
+      "a a a a a a a a b"
+      "c c c c c c c c c"
+      "d d d d d d d d d"
+      "e e e e e e e e e";
+    grid-template-columns: repeat(8,1fr);
+    align-items: start;
+    background-color: #D8CEC4;
     color: white;
   }
-  
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 10%;
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+  h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+  h6 {
+  font-size: 12px;
+}
+  .item1 {
+    grid-area: a;
+    position: sticky;
+    top: 0;
+    min-width: auto;
+    max-width: 100%;
   }
-  
-  .carousel-inner {
-    border-top: 5px;
-    border-left: 5px;
-    border-right: 5px;
-    border-bottom: 5px;
-    border-color: #fff0f4;
-    border-style: solid;
-    border-radius: 30px;
+  .item2 {
+    grid-area: b;
+    align-content: end; 
+    margin-right: 10px;
+    position: sticky;
+    top: 0;
+    min-width: auto;
+    max-width: 100%;
   }
-  
-  .icon {
-    padding-right: 20px;
+  .item3 {
+    grid-area: c; 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
   }
-   }
+  .item4 {
+    grid-area: d;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+  .item5 {
+    grid-area: e;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .dropdownF .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    color: white
+  }  
+  .navbar {
+    position: relative;
+    padding: 10px
+  }
+  .navbar a:hover, .dropdownF:hover .dropbtn {
+    display: inline-block;
+    letter-spacing: 0;
+    color: gray;
+  }
+  img {
+      max-width: 100%;
+      height: auto;
+      padding: 14px 16px;
+      border-radius: 30px;
+  }
+button {
+  cursor: pointer;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color:white;
+}
+a {
+  color: white;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 10%;
+}
+
+.carousel-inner {
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  border-bottom: 5px;
+  border-color: #fff0f4;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+.icon {
+  padding-right: 20px;
+}
+p::after {
+  content: "\a";
+  white-space: pre;
+}
+ }
 
 /* Pantalla grande */
 @media screen and (max-width: 10000px) and (min-width: 1200px) {
@@ -269,11 +262,10 @@ a {
     grid-template:
       "a a a a a a a a b"
       "c c c c d d d d d"
-      "e e e e f f f f f";
+      "c c c c d d d d d"
+      "e e e e e e e e e";
     grid-template-columns: repeat(8,1fr);
-
-    align-items:center;
-    justify-content: center;
+    align-items: center;
     background-color: #D8CEC4;
     color: white;
   }
@@ -295,8 +287,9 @@ a {
   }
   .item3 {
     grid-area: c; 
-    display: flex;
-    justify-content:center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
   }
   .item4 {
@@ -307,17 +300,23 @@ a {
   }
   .item5 {
     grid-area: e;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+    padding: 40px 0;
+    text-align: center;
   }
-  .item6 {
-    grid-area: f;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-  }
-
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    display:block;
+}
+  h4 {
+  font-size: 20px;
+  font-weight: bold;
+  display:block;
+}
+  h6 {
+  font-size: 12px;
+  display:block;
+}
   .dropdownF .dropbtn {
     font-size: 16px;
     border: none;
@@ -343,18 +342,6 @@ a {
       padding: 14px 16px;
       border-radius: 30px;
   }
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-h4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-h6 {
-  font-size: 12px;
-}
-
 button {
   cursor: pointer;
 }
@@ -388,5 +375,47 @@ a {
 
 .icon {
   padding-right: 20px;
+}
+
+.miForm input, .miForm textarea {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-top: 20px;
+  background: white;
+  padding:10px;
+  border: 1px solid pink;
+  border-radius: 10px;
+  color: lightgray;
+}
+.miForm button {
+  color: white;
+  margin-top: 20px;
+  background: pink;
+  padding:10px;
+  border:none;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.err {
+  color: red;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.miForm button:hover {
+  color: #D8CEC4;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+input.invalid {
+  border: 1px solid red;
 }
  }
