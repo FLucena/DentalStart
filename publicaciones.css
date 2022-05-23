@@ -1,3 +1,7 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 /* Pantalla chica */
 @media screen and (max-width: 600px) and (min-width: 50px) {
   .wrapper {
@@ -63,7 +67,6 @@
     outline: none;
     padding: 14px 20px;
     background-color: inherit;
-    font-family: inherit;
     margin: 0;
     color: white
   }  
@@ -194,7 +197,6 @@ a {
       outline: none;
       padding: 14px 20px;
       background-color: inherit;
-      font-family: inherit;
       margin: 0;
       color: white
     }  
@@ -324,7 +326,6 @@ a {
     outline: none;
     padding: 14px 20px;
     background-color: inherit;
-    font-family: inherit;
     margin: 0;
     color: white
   }  

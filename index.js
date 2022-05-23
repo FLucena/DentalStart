@@ -22,6 +22,7 @@ const nameInput = document.querySelector("input[name='nombre']");
 const emailInput = document.querySelector("input[name='email']");
 const messageInput = document.querySelector("textarea[name='mensaje']");
 const errorElement = document.getElementById('error')
+const okElement = document.getElementById('ok')
 
 form.addEventListener("submit", (e) => {
   let messages = [];
@@ -37,5 +38,11 @@ form.addEventListener("submit", (e) => {
   if (messages.length > 0) {
     e.preventDefault();
     errorElement.innerText = messages.join(' ');
+  }
+  else {
+    e.preventDefault();
+    errorElement.innerText = "";
+    okElement.innerText = "Mensaje enviado, ¡muchas gracias!";
+    form.reset();
   };
 });
