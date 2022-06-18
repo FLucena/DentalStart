@@ -2,6 +2,15 @@
   font-family: 'Raleway', sans-serif;
 }
 
+nav, footer {
+  background-color: #725A56;
+}
+
+footer {
+  grid-area: f;
+  color: white;
+}
+
 /* Pantalla chica */
 @media screen and (max-width: 600px) and (min-width: 50px) {
   .wrapper {
@@ -11,7 +20,8 @@
       "a a a a a a a a b"
       "c c c c c c c c c"
       "d d d d d d d d d"
-      "e e e e e e e e e";
+      "e e e e e e e e e"
+      "f f f f f f f f f";
     grid-template-columns: repeat(8,1fr);
     align-items:center;
     justify-content: center;
@@ -88,7 +98,7 @@
   }
   img {
       max-width: 100%;
-      height: auto;
+      height: 100%;
       padding: 14px 16px;
       border-radius: 30px;
   }

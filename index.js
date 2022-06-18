@@ -37,7 +37,8 @@ form.addEventListener("submit", (e) => {
   };
   if (messages.length > 0) {
     e.preventDefault();
-    errorElement.innerText = messages.join(' ');
+    okElement.innerText = "";
+    errorElement.innerText = messages.join('\n');
   }
   else {
     e.preventDefault();
