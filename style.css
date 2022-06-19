@@ -440,4 +440,16 @@ ul.lista-prestaciones li{
 	.map-container {
 		max-width: 100%;
 	}
+
+	h2 {
+		font-size: 20px;
+	}
+	.p2 {
+		font-size: 12px;
+	}
+	.centered {
+		top: 70%;
+		font-size: 40px;
+	}
+
 }
