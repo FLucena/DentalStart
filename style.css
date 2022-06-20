@@ -18,14 +18,14 @@ body {
 		"header"
 		"contenido"
 		"prestaciones"
-		"articles"
+		"figuras"
 		"direcciones"
 		"footer";
 }
 
 .contenedor-home .contenido,
 .contenedor-home .prestaciones,
-.contenedor-home .articles,
+.contenedor-home .figuras,
 .contenedor-home .direcciones {
 	background: #EEE8E8;
 	display: flex;
@@ -80,11 +80,11 @@ body {
 	text-align: center;
 }
 
-.contenedor-home .articles {
+.contenedor-home .figuras {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background: #fff0f4;
-	grid-area: articles;
+	grid-area: figuras;
 }
 
 .contenedor-home .direcciones {
@@ -164,7 +164,7 @@ a {
 	transition: transform 3s;
   }
 
-.img-container:hover p.centeredHidden {
+.img-container:hover .centeredHidden {
 	display: inline;
 	visibility: visible;
 }
@@ -395,9 +395,11 @@ ul.lista-prestaciones li{
 		justify-content: center;
 		align-items: center;
 	}
+
 	.header nav {
 		flex-direction: column;
 	}
+
 	.contenedor-home .contenido {
 		margin-top: 180px;
 	}
@@ -412,15 +414,11 @@ ul.lista-prestaciones li{
 		height: auto;
 		margin-top: 50px;	
 	}
-	.centered {
-		top: 70%;
-		font-size: 20px;
-	}
 	
 	.centeredHidden {
 		top: 90%;
 		font-size: 15px;
-	  }
+	}
 		
 	.contenedor-contacto {
 		grid-template-columns: 1fr;
@@ -430,6 +428,7 @@ ul.lista-prestaciones li{
 		"logo-container"
 		"footer";
 	}
+
 	.contenedor-publicaciones {
 		margin-top: 180px;
 	}
@@ -452,8 +451,8 @@ ul.lista-prestaciones li{
 		font-size: 12px;
 	}
 	.centered {
-		top: 70%;
-		font-size: 40px;
+		top: 60%;
+		font-size: 25px;
 	}
 
 }
