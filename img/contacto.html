@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/2f29d12046.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+  <title>Dental Start</title>
+</head>
+<body class="contenedor-contacto">
+    <header class="header">
+      <nav>
+        <a href="index.html"><i class="fa-solid fa-house-chimney icon"></i>Inicio</a>
+        <a href='publicaciones.html'><i class="fa-regular fa-calendar-days icon"></i>Publicaciones</a>
+        <a href='#'><i class="fa-regular fa-envelope icon"></i>Quiero saber m&aacute;s!</a>
+        <span class="socialmedia">
+          <a href="https://www.instagram.com/dental.start/" target="_blank" class="fa fa-instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=54111554670433" target="_blank" class="fa fa-whatsapp"></a>
+        </span>
+      </nav>  
+    </header>
+
+    <section class="form-container">
+      <h1>Contactanos</h1>
+      <h5>Nos encantaría escucharte! Por favor envianos un mensaje.</h5>    
+      <form class="miForm" name="miFormulario">
+        <div class="input">
+          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" maxlength="30">
+        </div>
+        <div class="input">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email" maxlength="32">
+        </div>
+        <div class="input">
+          <textarea name="mensaje" class="form-control" cols="30" rows="4" placeholder="Deja tu consulta." spellcheck="false"></textarea>
+        </div>
+          <button class="botonSubmit" type="submit">Enviar</button>
+        <div id="error"></div>
+        <div id="ok"></div>
+      </form>        
+    </section>
+    <section class="logo-container">
+      <img class="d-block w-250 box-shadow" src="img/logo-hd.png" alt="logo">
+    </section>
+    <footer class="footer">
+      <p> &copy; Todos los derechos reservados - 2022</p>
+    </footer>
+    <a  class="whats-app" href="https://api.whatsapp.com/send?phone=54111554670433" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <script src="index.js"></script>
+</body>
+</html> 
