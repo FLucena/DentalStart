@@ -55,7 +55,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch('./api/submitForm/', {
+      const response = await fetch('./api/submitform/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
