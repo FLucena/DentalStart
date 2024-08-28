@@ -109,6 +109,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                 onChange={handleInputChange}
                 placeholder="Nombre"
                 maxLength={30}
+                required
               />
               <input
                 type="text"
@@ -118,6 +119,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                 onChange={handleInputChange}
                 placeholder="Celular"
                 maxLength={15}
+                required
               />
               <textarea
                 name="motivo"
@@ -127,6 +129,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                 rows={3}
                 placeholder="Motivo de la consulta"
                 spellCheck="false"
+                required
               />
               <div className="flex justify-center">
                 <select
@@ -136,6 +139,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                   value={form.dias}
                   onChange={handleInputChange}
                   size={6}
+                  required
                 >
                   <option value="Lunes">Lunes</option>
                   <option value="Martes">Martes</option>
@@ -154,6 +158,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                   value={form.horarios}
                   onChange={handleInputChange}
                   size={3}
+                  required
                 >
                   <option value="Mañana">Mañana</option>
                   <option value="Tarde">Tarde</option>
