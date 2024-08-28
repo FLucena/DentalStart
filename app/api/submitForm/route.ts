@@ -22,13 +22,12 @@ export async function POST(request: NextRequest) {
       result = { error: 'La respuesta del servidor no es JSON' };
     }
 
-    // Create the response object with CORS and referrer policy headers
     const headers = new Headers({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*', // Allow all origins
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Allow specific methods
-      'Access-Control-Allow-Headers': 'Content-Type', // Allow specific headers
-      'Referrer-Policy': 'strict-origin-when-cross-origin', // Set referrer policy
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
     });
 
     if (response.ok) {
@@ -47,4 +46,14 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ error: 'Error handling request' }, { status: 500, headers });
   }
+}
+
+export async function OPTIONS(request: NextRequest) {
+  const headers = new Headers({
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+  });
+  return new NextResponse(null, { status: 204, headers });
 }
