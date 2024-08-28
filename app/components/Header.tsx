@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 z-50 w-full h-16 bg-[#604D44] text-white shadow-md">
       <nav className="flex justify-center items-center h-full space-x-16">
         <Link href="/" className="no-underline text-white hover:text-gray-300">Inicio</Link>
-        <Link href="/publicaciones/" className="no-underline text-white hover:text-gray-300">Publicaciones</Link>
+        <Link href="/enconstruccion/" className="no-underline text-white hover:text-gray-300">Publicaciones</Link>
         <Link href="/contacto/" className="no-underline text-white hover:text-gray-300">Quiero saber más</Link>
         <div className="socialmedia flex space-x-4">
           <a
