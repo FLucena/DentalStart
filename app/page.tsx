@@ -113,16 +113,17 @@ export default function HomePage() {
         </section>
 
         {/* Icono flotante de WhatsApp */}
-        <div className="fixed bottom-5 right-5 z-50 flex max-h-14 max-w-18">
-          <a
-            href="https://api.whatsapp.com/send?phone=54111554670433"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 pb-12"
-          >
-            <i className="fab fa-whatsapp text-white text-3xl mb-8"></i>
-          </a>
-        </div>
+<div className="fixed bottom-5 right-5 z-50">
+  <a
+    href="https://api.whatsapp.com/send?phone=54111554670433"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-500 w-14 h-14 rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 flex items-center justify-center"
+  >
+    <i className="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+</div>
+
 
         {/* Popup */}
         {isPopupVisible && (
