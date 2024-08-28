@@ -53,38 +53,36 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzdITpctADgwshAIoXZTRfrGWqTnOkssWIgqnhdGgSQtJNy5hiLkXPaEu2a0mesMUdBoA/exec";
-
+  
     try {
-      console.log(JSON.stringify(form));
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(form),
+      const response = await fetch('./api/submitForm/', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify(form), // Send the form data to the API route
       });
-
-      const result = await response.text();
-
-      if (result === "Success") {
-        setMessage("Gracias por tu mensaje. Te contactaremos pronto.");
+  
+      const result = await response.json(); // Get the response from the API route
+  
+      if (result.message === 'Success') {
+        setMessage('Gracias por tu mensaje. Te contactaremos pronto.');
         setForm({
-          nombre: "",
-          celular: "",
-          motivo: "",
+          nombre: '',
+          celular: '',
+          motivo: '',
           dias: [],
           horarios: [],
         });
       } else {
-        setMessage("Hubo un error al enviar el formulario. Intenta nuevamente.");
+        setMessage('Hubo un error al enviar el formulario. Intenta nuevamente.');
       }
     } catch (error) {
-      console.error("Error al enviar el formulario", error);
-      setMessage("Hubo un error al enviar el formulario. Intenta nuevamente.");
+      console.error('Error al enviar el formulario', error);
+      setMessage('Hubo un error al enviar el formulario. Intenta nuevamente.');
     }
   };
+  
 
   return (
     <>
