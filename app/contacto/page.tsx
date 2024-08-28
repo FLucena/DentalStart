@@ -59,7 +59,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="mt-16"> {/* Added margin to push content below the header */}
+      <div className="pt-[calc(4rem+10vh)] md:pt-[calc(5rem+10vh)] text-center">
         <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-lg mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">Contáctanos</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>

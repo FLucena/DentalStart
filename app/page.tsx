@@ -24,9 +24,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#E2DBD4] via-[#D9CFC6] to-[#BFAF9E] text-[#725A56]">
       {/* Main Content */}
-      <main className="pt-24 text-center">
-        <h1 className="text-6xl font-bold">Dental Start</h1>
-        <p className="text-2xl mt-4">Tu sonrisa es tu mejor accesorio.</p>
+      <main className="pt-[calc(4rem+10vh)] md:pt-[calc(5rem+10vh)] text-center">
+        <h1 className="text-4xl md:text-6xl font-bold">Dental Start</h1>
+        <p className="text-lg md:text-2xl mt-4">Tu sonrisa es tu mejor accesorio.</p>
 
         {/* Centrado del logo */}
         <div className="mt-8 flex justify-center">
@@ -38,7 +38,7 @@ export default function HomePage() {
         </Link>
 
         {/* Prestaciones */}
-        <section className="my-10 p-8 bg-[#e2dbd6] text-center shadow-md rounded-lg">
+        <section className="my-10 p-4 md:p-8 bg-[#e2dbd6] text-center shadow-md rounded-lg">
           <h2 className="text-4xl font-bold mb-6">Prestaciones</h2>
           <ul className="list-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-lg">
             <li className="relative flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
