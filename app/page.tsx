@@ -107,7 +107,24 @@ export default function HomePage() {
           </ul>
         </section>
         
-         {/* Popup */}
+        {/* Mapa */}
+        <section className="my-10">
+          {/* ...otros contenidos */}
+        </section>
+
+        {/* Icono flotante de WhatsApp */}
+        <div className="fixed bottom-5 right-5 z-50 flex max-h-14 max-w-18">
+          <a
+            href="https://api.whatsapp.com/send?phone=54111554670433"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 pb-12"
+          >
+            <i className="fab fa-whatsapp text-white text-3xl mb-8"></i>
+          </a>
+        </div>
+
+        {/* Popup */}
         {isPopupVisible && (
           <div 
             className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50" 
@@ -116,39 +133,12 @@ export default function HomePage() {
             <div
               ref={popupRef}
               className="bg-white p-4 rounded-lg shadow-lg max-w-xs w-full max-h-[70vh] overflow-y-auto relative"
-              onClick={(e) => e.stopPropagation()} // Evita que el click dentro del popup cierre el popup
+              onClick={(e) => e.stopPropagation()}
             >
               <ContactPopup onClose={() => setIsPopupVisible(false)} />
             </div>
           </div>
         )}
-
-        {/* Mapa */}
-        <section className="my-10">
-          <h2 className="text-4xl font-bold text-center mb-6">Dónde estamos</h2>
-          <address className='mb-6' property="direccion" typeof="direccion">
-            <p>
-              <span property="direccionCalle">Av. Boedo 414</span>,
-              <span property="addressLocality">CABA</span>,
-            </p>
-            <p>
-              <span property="codigoPostal">CP 1212</span>,
-              <span property="direccionProvincia">Buenos Aires</span>
-              <span property="direccionPais">Argentina</span>
-            </p>
-          </address>
-          <div className="flex justify-center pb-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.471566356928!2d-58.418839049104804!3d-34.61752168036007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf802af37a3%3A0x39cbc6406794b48f!2sAv.%20Boedo%20414%2C%20C1212%20CABA!5e0!3m2!1sen!2sar!4v1675047046693!5m2!1sen!2sar"
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </section>
       </main>
     </div>
   );

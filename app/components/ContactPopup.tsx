@@ -135,7 +135,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                   multiple
                   value={form.dias}
                   onChange={handleInputChange}
-                  size={5}
+                  size={6}
                 >
                   <option value="Lunes">Lunes</option>
                   <option value="Martes">Martes</option>
@@ -153,7 +153,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                   multiple
                   value={form.horarios}
                   onChange={handleInputChange}
-                  size={5}
+                  size={3}
                 >
                   <option value="Mañana">Mañana</option>
                   <option value="Tarde">Tarde</option>
