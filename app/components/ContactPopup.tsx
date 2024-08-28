@@ -55,7 +55,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch('./api/submitform/', {
+      const response = await fetch('./api/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,8 +64,8 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
       });
   
       const result = await response.json(); // Get the response from the API route
-  
-      if (result.message === 'Success') {
+      console.log(result.message);
+      if (result.message === 'Datos guardados con éxito') {
         setMessage('Gracias por tu mensaje. Te contactaremos pronto.');
         setForm({
           nombre: '',
@@ -75,7 +75,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
           horarios: [],
         });
       } else {
-        setMessage('Hubo un error al enviar el formulario. Intenta nuevamente.');
+        setMessage('Hubo un error al enviar el formulario. Intenta nuevamente y asegúrate de completar todos los campos.');
       }
     } catch (error) {
       console.error('Error al enviar el formulario', error);
