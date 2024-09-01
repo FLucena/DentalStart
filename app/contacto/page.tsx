@@ -93,7 +93,7 @@ export default function ContactPage() {
               required
             />
             <div className="flex flex-col">
-              <label className="mb-2">Días Disponibles</label>
+              <label className="mb-2">Días Disponibles:</label>
               <select
                 name="dias"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
@@ -112,7 +112,7 @@ export default function ContactPage() {
               </select>
             </div>
             <div className="flex flex-col">
-              <label className="mb-2">Horarios Disponibles</label>
+              <label className="mb-2">Horarios Disponibles:</label>
               <select
                 name="horarios"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
@@ -120,11 +120,10 @@ export default function ContactPage() {
                 value={form.horarios}
                 onChange={handleInputChange}
                 required
-                size={3}
+                size={2}
               >
                 <option value="Mañana">Mañana</option>
                 <option value="Tarde">Tarde</option>
-                <option value="Noche">Noche</option>
               </select>
             </div>
             <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">

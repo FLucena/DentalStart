@@ -131,6 +131,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                 spellCheck="false"
                 required
               />
+              <p className="text-sm">Días disponibles:</p>
               <div className="flex justify-center">
                 <select
                   name="dias"
@@ -150,6 +151,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                 </select>
               </div>
 
+              <p className="text-sm">Turnos disponibles:</p>
               <div className="flex justify-center">
                 <select
                   name="horarios"
@@ -157,12 +159,11 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
                   multiple
                   value={form.horarios}
                   onChange={handleInputChange}
-                  size={3}
+                  size={2}
                   required
                 >
                   <option value="Mañana">Mañana</option>
                   <option value="Tarde">Tarde</option>
-                  <option value="Noche">Noche</option>
                 </select>
               </div>
               <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
