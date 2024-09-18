@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Head from "next/head"; // Import Head component
 import "./globals.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -21,6 +20,7 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,10 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="description" content="Tu sonrisa es el mejor accesorio." />
-        <title>Dental Start</title>
-      </Head>
       <body className={inter.className}>
         <Header />
         {children}

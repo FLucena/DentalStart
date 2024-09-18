@@ -109,8 +109,20 @@ export default function HomePage() {
         
         {/* Mapa */}
         <section className="my-10">
-          {/* ...otros contenidos */}
+          <h2 className="text-4xl font-bold mb-6">Ubicación</h2>
+          <div className="relative h-96 w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.954509274732!2d-58.4206711!3d-34.6200161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbf01a506d3d%3A0x5bb53fae93e05a65!2sAv.%20Boedo%20414%2C%20CABA!5e0!3m2!1ses!2sar!4v1694710365547!5m2!1ses!2sar"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </section>
+
 
         {/* Icono flotante de WhatsApp */}
         <div className="fixed bottom-5 right-5 z-50">

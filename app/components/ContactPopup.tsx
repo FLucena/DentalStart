@@ -27,7 +27,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
     // Función para manejar clics fuera del popup
     const handleClickOutside = (event: MouseEvent) => {
       if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
-        onClose(); // Llama a la función de cierre recibida como parámetro
+        onClose();
       }
     };
 
