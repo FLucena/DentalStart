@@ -75,7 +75,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
           dias: [],
           horarios: [],
         });
-        setIsFormSubmitted(true); // Oculta el formulario y muestra el mensaje
+        setIsFormSubmitted(true);
       } else {
         setMessage('Hubo un error al enviar el formulario. Intenta nuevamente y asegúrate de completar todos los campos.');
       }
@@ -107,7 +107,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
               <div className="flex justify-center items-center h-32">
                 <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-600"></div>
               </div>
-            ) : isFormSubmitted ? (  // Si el formulario fue enviado, muestra solo el mensaje
+            ) : isFormSubmitted ? (
               <p className="mt-4 text-center text-gray-600">{message}</p>
             ) : (
               <form className="space-y-4" onSubmit={handleSubmit}>
