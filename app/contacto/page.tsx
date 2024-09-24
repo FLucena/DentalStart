@@ -58,81 +58,91 @@ export default function ContactPage() {
   
 
   return (
-    <>
-      <div className="pt-[calc(4rem+10vh)] md:pt-[calc(5rem+10vh)] text-center">
-        <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-lg mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6">Contáctanos</h2>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <input
-              type="text"
+    <div className="pt-[calc(4rem+10vh)] md:pt-[calc(5rem+10vh)] text-center">
+      <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-lg mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-6">Contáctanos</h2>
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+            name="nombre"
+            value={form.nombre}
+            onChange={handleInputChange}
+            placeholder="Nombre"
+            maxLength={30}
+            required
+          />
+          <input
+            type="text"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+            name="celular"
+            value={form.celular}
+            onChange={handleInputChange}
+            placeholder="Celular"
+            maxLength={15}
+            required
+          />
+          <textarea
+            name="motivo"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+            value={form.motivo}
+            onChange={handleInputChange}
+            rows={3}
+            placeholder="Motivo de la consulta"
+            required
+          />
+          <div className="flex flex-col">
+            <label className="mb-2">Días Disponibles:</label>
+            <select
+              name="dias"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-              name="nombre"
-              value={form.nombre}
+              multiple
+              value={form.dias}
               onChange={handleInputChange}
-              placeholder="Nombre"
-              maxLength={30}
               required
-            />
-            <input
-              type="text"
+              size={6}
+            >
+              <option value="Lunes">Lunes</option>
+              <option value="Martes">Martes</option>
+              <option value="Miércoles">Miércoles</option>
+              <option value="Jueves">Jueves</option>
+              <option value="Viernes">Viernes</option>
+              <option value="Sábado">Sábado</option>
+            </select>
+          </div>
+          <div className="flex flex-col">
+            <label className="mb-2">Horarios Disponibles:</label>
+            <select
+              name="horarios"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-              name="celular"
-              value={form.celular}
+              multiple
+              value={form.horarios}
               onChange={handleInputChange}
-              placeholder="Celular"
-              maxLength={15}
               required
-            />
-            <textarea
-              name="motivo"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-              value={form.motivo}
-              onChange={handleInputChange}
-              rows={3}
-              placeholder="Motivo de la consulta"
-              required
-            />
-            <div className="flex flex-col">
-              <label className="mb-2">Días Disponibles:</label>
-              <select
-                name="dias"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                multiple
-                value={form.dias}
-                onChange={handleInputChange}
-                required
-                size={6}
-              >
-                <option value="Lunes">Lunes</option>
-                <option value="Martes">Martes</option>
-                <option value="Miércoles">Miércoles</option>
-                <option value="Jueves">Jueves</option>
-                <option value="Viernes">Viernes</option>
-                <option value="Sábado">Sábado</option>
-              </select>
-            </div>
-            <div className="flex flex-col">
-              <label className="mb-2">Horarios Disponibles:</label>
-              <select
-                name="horarios"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                multiple
-                value={form.horarios}
-                onChange={handleInputChange}
-                required
-                size={2}
-              >
-                <option value="Mañana">Mañana</option>
-                <option value="Tarde">Tarde</option>
-              </select>
-            </div>
-            <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-              Enviar
-            </button>
-          </form>
-          {message && <p className="mt-4 text-center text-gray-600">{message}</p>}
-        </div>
+              size={2}
+            >
+              <option value="Mañana">Mañana</option>
+              <option value="Tarde">Tarde</option>
+            </select>
+          </div>
+          <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+            Enviar
+          </button>
+        </form>
+        {message && <p className="mt-4 text-center text-gray-600">{message}</p>}
       </div>
-    </>
+
+       {/* Icono flotante de WhatsApp */}
+       <div className="fixed bottom-5 right-5 z-50">
+          <a
+            href="https://api.whatsapp.com/send?phone=54111554670433"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 w-14 h-14 rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 flex items-center justify-center"
+          >
+            <i className="fab fa-whatsapp text-white text-3xl"></i>
+          </a>
+        </div>
+    </div>
   );
 }
