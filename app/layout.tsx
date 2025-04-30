@@ -6,8 +6,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { GoogleTagManager } from '@next/third-parties/google';
 import ClientLayout from "./components/ClientLayout";
+import { metadata, viewport } from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export { metadata, viewport };
 
 export default function RootLayout({
   children,
