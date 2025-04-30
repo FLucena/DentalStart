@@ -6,17 +6,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Dental Start - Odontología Integral en Buenos Aires",
-  description: "Clínica odontológica integral en Buenos Aires. Ofrecemos tratamientos de odontología general, estética, implantes, ortodoncia y más.",
+  title: "Dental Start - Clínica Odontológica en Buenos Aires | Tratamientos Dentales Integrales",
+  description: "Dental Start es tu clínica odontológica de confianza en Buenos Aires. Ofrecemos tratamientos integrales de odontología general, estética dental, implantes, ortodoncia, blanqueamiento y más. Profesionales certificados y tecnología de última generación para cuidar tu sonrisa.",
   keywords: "dentista, odontología, sonrisa, cuidado dental, Dental Start",
   openGraph: {
-    title: "Dental Start - Odontología Integral en Buenos Aires",
-    description: "Clínica odontológica integral en Buenos Aires. Ofrecemos tratamientos de odontología general, estética, implantes, ortodoncia y más.",
+    title: "Dental Start - Clínica Odontológica en Buenos Aires | Tratamientos Dentales Integrales",
+    description: "Dental Start es tu clínica odontológica de confianza en Buenos Aires. Ofrecemos tratamientos integrales de odontología general, estética dental, implantes, ortodoncia, blanqueamiento y más. Profesionales certificados y tecnología de última generación para cuidar tu sonrisa.",
     url: "https://dental-start.vercel.app/",
     type: "website",
     images: [
       {
-        url: "https://dental-start.vercel.app/logo-hd.png",
+        url: "https://dental-start.vercel.app/logo.png",
         width: 1200,
         height: 630,
         alt: "Dental Start Logo",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dental Start - Odontología Integral en Buenos Aires",
-    description: "Clínica odontológica integral en Buenos Aires. Ofrecemos tratamientos de odontología general, estética, implantes, ortodoncia y más.",
-    images: ["https://dental-start.vercel.app/logo-hd.png"],
+    title: "Dental Start - Clínica Odontológica en Buenos Aires | Tratamientos Dentales Integrales",
+    description: "Dental Start es tu clínica odontológica de confianza en Buenos Aires. Ofrecemos tratamientos integrales de odontología general, estética dental, implantes, ortodoncia, blanqueamiento y más. Profesionales certificados y tecnología de última generación para cuidar tu sonrisa.",
+    images: ["https://dental-start.vercel.app/logo.png"],
   },
   icons: {
     icon: ['/icon.ico?v=4'],
