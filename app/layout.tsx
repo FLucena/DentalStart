@@ -15,18 +15,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
-        <title>Dental Start - Odontología Integral en Buenos Aires</title>
-        <meta name="description" content="Dental Start - Clínica odontológica integral en Buenos Aires. Ofrecemos tratamientos de odontología general, estética, implantes, ortodoncia y más." />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Dental Start - Odontología Integral en Buenos Aires" />
-        <meta property="og:description" content="Clínica odontológica integral en Buenos Aires. Ofrecemos tratamientos de odontología general, estética, implantes, ortodoncia y más." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dental-start.vercel.app/" />
-        <meta property="og:image" content="/logo-hd.png" />
+        <meta name="language" content="Spanish" />
+        <meta name="author" content="Dental Start" />
+        <meta name="theme-color" content="#604D44" />
         <link rel="canonical" href="https://dental-start.vercel.app/" />
+        <meta property="og:site_name" content="Dental Start" />
+        <meta property="og:locale" content="es_AR" />
+
       </head>
       <body className={inter.className}>
         <ClientLayout>
