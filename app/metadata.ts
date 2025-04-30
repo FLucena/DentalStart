@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "Dental Start - Clínica Odontológica en Buenos Aires | Tratamientos Dentales Integrales",
   description: "Dental Start es tu clínica odontológica de confianza en Buenos Aires. Ofrecemos tratamientos integrales de odontología general, estética dental, implantes, ortodoncia, blanqueamiento y más. Profesionales certificados y tecnología de última generación para cuidar tu sonrisa.",
   keywords: "dentista, odontología, sonrisa, cuidado dental, Dental Start",
+  authors: [{ name: "Francisco Lucena", url: "https://dental-start.vercel.app/" }],
+  publisher: "Francisco Lucena",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: "Dental Start - Clínica Odontológica en Buenos Aires | Tratamientos Dentales Integrales",
     description: "Dental Start es tu clínica odontológica de confianza en Buenos Aires. Ofrecemos tratamientos integrales de odontología general, estética dental, implantes, ortodoncia, blanqueamiento y más. Profesionales certificados y tecnología de última generación para cuidar tu sonrisa.",
