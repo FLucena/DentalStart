@@ -4,16 +4,84 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #2B6CB0;
+  --secondary-color: #4299E1;
+  --accent-color: #48BB78;
+  --text-color: #2D3748;
+  --background-color: #F7FAFC;
+  --card-background: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Modern card styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+/* Service card hover effects */
+.service-card {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .description {
+  @apply absolute bottom-0 left-0 right-0 bg-white p-4 transform translate-y-full transition-transform duration-300;
+}
+
+.service-card:hover .description {
+  transform: translateY(0);
+}
+
+/* Modern button styles */
+.btn-primary {
+  @apply bg-[#2B6CB0] text-white px-6 py-2 rounded-lg transition-all duration-300 hover:bg-[#4299E1] hover:shadow-md;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B6CB0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4299E1;
+}
+
+/* Modern input styles */
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2B6CB0] transition-all duration-300;
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .text-responsive {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 769px) {
+  .text-responsive {
+    @apply text-lg;
   }
 }
 
