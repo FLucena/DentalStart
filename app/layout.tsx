@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <title>Dental Start - Odontología Integral en Buenos Aires</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
@@ -26,7 +27,8 @@ export default function RootLayout({
         <link rel="canonical" href="https://dental-start.vercel.app/" />
         <meta property="og:site_name" content="Dental Start" />
         <meta property="og:locale" content="es_AR" />
-
+        <meta name="twitter:site" content="@dentalstart" />
+        <meta name="twitter:creator" content="@dentalstart" />
       </head>
       <body className={inter.className}>
         <ClientLayout>
