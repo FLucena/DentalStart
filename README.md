@@ -20,6 +20,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Tech Stack
+
+This project is built using the following technologies:
+
+- **Framework**: [Next.js](https://nextjs.org/) (v14.2.12)
+- **Language**: [TypeScript](https://www.typescriptlang.org/) (v5)
+- **UI Library**: [React](https://reactjs.org/) (v18)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v3.4.1)
+- **Icons**: [Font Awesome](https://fontawesome.com/) (v6.6.0)
+- **Carousel**: [React Slick](https://react-slick.neostack.com/) (v0.30.2)
+- **Loading**: [React Loading](https://www.npmjs.com/package/react-loading) (v2.0.3)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
