@@ -174,7 +174,13 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose, onReady }) => {
         <div className="p-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#2D3748] mb-2">Contáctanos</h2>
-            <p className="text-[#4A5568]">Nos encantaría escucharte! Por favor envíanos un mensaje.</p>
+            <p className="text-[#4A5568] mb-4">Nos encantaría escucharte! Por favor envíanos un mensaje.</p>
+            <div className="flex items-center justify-center text-[#2D3748] bg-[#D8CEC6]/20 rounded-lg p-3">
+              <i className="fas fa-phone mr-2"></i>
+              <a href="tel:01154670433" className="font-semibold hover:text-[#1A202C] transition-colors duration-200">
+                011 5467-0433
+              </a>
+            </div>
           </div>
 
           {isLoading ? (

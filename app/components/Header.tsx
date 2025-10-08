@@ -46,6 +46,13 @@ const Header: React.FC = () => {
               <span className="hidden sm:inline">Contacto</span>
             </button>
           </div>
+          {/* Phone number */}
+          <div className="hidden md:flex items-center text-white text-sm">
+            <i className="fas fa-phone mr-2"></i>
+            <a href="tel:01154670433" className="hover:text-gray-300 transition-colors duration-200">
+              011 5467-0433
+            </a>
+          </div>
           {/* Right: Instagram */}
           <div className="flex-1 flex justify-end">
             <a
