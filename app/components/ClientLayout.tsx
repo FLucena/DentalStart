@@ -7,7 +7,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const popupRef = useRef<HTMLDivElement>(null);
 
-  const openPopup = () => setIsPopupVisible(true);
   const closePopup = () => setIsPopupVisible(false);
 
   return (

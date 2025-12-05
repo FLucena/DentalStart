@@ -48,6 +48,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function OPTIONS(request: NextRequest) {
   const headers = new Headers({
     'Access-Control-Allow-Origin': '*',
