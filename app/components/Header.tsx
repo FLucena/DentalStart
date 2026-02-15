@@ -49,8 +49,8 @@ const Header: React.FC = () => {
           {/* Phone number */}
           <div className="hidden md:flex items-center text-white text-sm">
             <i className="fas fa-phone mr-2"></i>
-            <a href="tel:01154670433" className="hover:text-gray-300 transition-colors duration-200">
-              011 5467-0433
+            <a href="tel:+541154670433" className="hover:text-gray-300 transition-colors duration-200">
+              +541154670433
             </a>
           </div>
           {/* Right: Instagram */}
