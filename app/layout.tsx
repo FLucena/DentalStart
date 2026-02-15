@@ -34,10 +34,6 @@ export default function RootLayout({
             gtag('config', 'AW-11396130788');
           `}
         </Script>
-        {/* Event snippet for Contacto conversion page */}
-        <Script id="gtag-contact-conversion" strategy="beforeInteractive">
-          {`gtag('event', 'conversion', {'send_to': 'AW-11396130788/3OYNCNq9kvkbEOTPjLoq'});`}
-        </Script>
       </head>
       <body className={inter.className}>
         <GtagConversionScript />

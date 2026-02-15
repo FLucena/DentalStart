@@ -124,8 +124,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose, onReady }) => {
 
       const result = await response.json();
       if (result.message === 'Datos guardados con éxito') {
-        if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-          window.gtag_report_conversion();
+        const gtag = typeof window !== 'undefined' ? (window as unknown as { gtag?: (a: string, b: string, c: object) => void }).gtag : undefined;
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', { send_to: 'AW-11396130788/3OYNCNq9kvkbEOTPjLoq' });
         }
         setMessage('Gracias por tu mensaje. Te contactaremos pronto.');
         setForm({
