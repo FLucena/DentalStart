@@ -4,14 +4,12 @@ import Header from "./components/Header";
 import "./globals.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { GoogleTagManager } from '@next/third-parties/google';
+import Script from "next/script";
 import GtagConversionScript from "./components/GtagConversionScript";
 import ClientLayout from "./components/ClientLayout";
 import { metadata, viewport } from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const GTAG_ADS_ID = 'AW-11396130788';
 
 export { metadata, viewport };
 
@@ -23,7 +21,23 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <GoogleTagManager gtmId={GTAG_ADS_ID} />
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11396130788"
+          strategy="beforeInteractive"
+        />
+        <Script id="gtag-config" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11396130788');
+          `}
+        </Script>
+        {/* Event snippet for Contacto conversion page */}
+        <Script id="gtag-contact-conversion" strategy="beforeInteractive">
+          {`gtag('event', 'conversion', {'send_to': 'AW-11396130788/3OYNCNq9kvkbEOTPjLoq'});`}
+        </Script>
       </head>
       <body className={inter.className}>
         <GtagConversionScript />
