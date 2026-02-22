@@ -185,6 +185,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose, onReady }) => {
                 +541154670433
               </a>
             </div>
+            <p className="text-sm text-[#4A5568] bg-[#D8CEC6]/20 rounded-lg p-3 mt-3 text-center">
+              Es un consultorio privado; no se brinda asistencia gratuita.
+            </p>
           </div>
 
           {isLoading ? (
