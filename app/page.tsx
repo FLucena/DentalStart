@@ -35,29 +35,34 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#D8CEC6]">
       {/* Hero Section */}
-      <section className="relative mt-16 sm:mt-20 py-28 min-h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D8CEC6] via-[#D8CEC6]/90 to-[#D8CEC6]/80 z-0"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
+      <section className="relative mt-16 sm:mt-20 min-h-[85vh] sm:min-h-[88vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Fondo: base + gradiente suave + ligero brillo central */}
+        <div className="absolute inset-0 bg-[#D8CEC6] z-0" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E8E2DC] via-[#D8CEC6] to-[#CFC6BE] z-0" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.14),transparent_70%)] z-0" aria-hidden />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 z-10 text-center flex flex-col items-center justify-center">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#2D3748] mb-4 md:mb-6 animate-fade-in">
             Dental Start
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#4A5568] mb-6 md:mb-8 animate-fade-in-up">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#4A5568] mb-8 sm:mb-10 md:mb-12 animate-fade-in-up max-w-xl mx-auto">
             Tu sonrisa es tu mejor accesorio
           </p>
-          <div className="mt-6 md:mt-8 animate-fade-in-up">
+          <div className="my-8 sm:my-10 md:my-12 animate-fade-in-up">
             <Image 
               src="/logo-hd.png" 
               alt="Logo" 
               width={600} 
               height={600}
               priority
-              className="mx-auto w-[300px] sm:w-[400px] md:w-[600px] transform hover:scale-105 transition-transform duration-300"
+              className="mx-auto w-[280px] sm:w-[380px] md:w-[520px] transform hover:scale-105 transition-transform duration-300"
             />
           </div>
           <button 
             onClick={openPopup}
-            className="mt-6 md:mt-8 inline-block px-6 sm:px-8 py-2 sm:py-3 bg-[#2D3748] text-white rounded-xl font-semibold hover:bg-[#1A202C] transition-all duration-300 hover:shadow-lg animate-fade-in-up text-sm sm:text-base"
+            type="button"
+            className="mt-6 sm:mt-8 md:mt-10 inline-flex items-center justify-center gap-2 px-8 sm:px-12 py-4 sm:py-5 bg-[#2D3748] text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:bg-[#1A202C] hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#2D3748] focus:ring-offset-2 focus:ring-offset-[#D8CEC6] transition-all duration-200 animate-fade-in-up border border-[#1A202C]/20"
           >
+            <i className="fas fa-calendar-check text-white/90" aria-hidden />
             Solicitar Consulta
           </button>
         </div>
