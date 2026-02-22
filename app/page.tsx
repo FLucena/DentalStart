@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#D8CEC6]">
       {/* Hero Section */}
-      <section className="relative py-28 min-h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative mt-16 sm:mt-20 py-28 min-h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#D8CEC6] via-[#D8CEC6]/90 to-[#D8CEC6]/80 z-0"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#2D3748] mb-4 md:mb-6 animate-fade-in">
