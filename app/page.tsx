@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import ContactPopup from './components/ContactPopup';
+import ConsultorioGallery from './components/ConsultorioGallery';
 import { usePopupSession } from './hooks/usePopupSession';
 
 export default function HomePage() {
@@ -41,13 +42,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#E8E2DC] via-[#D8CEC6] to-[#CFC6BE] z-0" aria-hidden />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.14),transparent_70%)] z-0" aria-hidden />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 z-10 text-center flex flex-col items-center justify-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#2D3748] mb-4 md:mb-6 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#2D3748] mb-4 md:mb-6 animate-fade-in motion-reduce:animate-none motion-reduce:opacity-100">
             Dental Start
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#4A5568] mb-8 sm:mb-10 md:mb-12 animate-fade-in-up max-w-xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#4A5568] mb-8 sm:mb-10 md:mb-12 animate-fade-in-up motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 max-w-xl mx-auto">
             Tu sonrisa es tu mejor accesorio
           </p>
-          <div className="my-8 sm:my-10 md:my-12 animate-fade-in-up">
+          <div className="my-8 sm:my-10 md:my-12 animate-fade-in-up motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0">
             <Image 
               src="/logo-hd.png" 
               alt="Logo" 
@@ -60,7 +61,7 @@ export default function HomePage() {
           <button 
             onClick={openPopup}
             type="button"
-            className="mt-6 sm:mt-8 md:mt-10 inline-flex items-center justify-center gap-2 px-8 sm:px-12 py-4 sm:py-5 bg-[#2D3748] text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:bg-[#1A202C] hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#2D3748] focus:ring-offset-2 focus:ring-offset-[#D8CEC6] transition-all duration-200 animate-fade-in-up border border-[#1A202C]/20"
+            className="mt-6 sm:mt-8 md:mt-10 inline-flex items-center justify-center gap-2 px-8 sm:px-12 py-4 sm:py-5 bg-[#2D3748] text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:bg-[#1A202C] hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#2D3748] focus:ring-offset-2 focus:ring-offset-[#D8CEC6] transition-all duration-200 animate-fade-in-up motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 border border-[#1A202C]/20"
           >
             <i className="fas fa-calendar-check text-white/90" aria-hidden />
             Solicitar Consulta
@@ -97,6 +98,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ConsultorioGallery />
 
       {/* Location Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white/50 backdrop-blur-sm">
